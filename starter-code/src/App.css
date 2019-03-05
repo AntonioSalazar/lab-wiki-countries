@@ -30,3 +30,17 @@
     transform: rotate(360deg);
   }
 }
+
+.list-group{
+  display: flex;
+  flex-direction: row;
+}
+
+.info-container{
+  background: green;
+  position: absolute;
+  float: rigth;
+  top: 80px;
+  left: 50%;
+  width: 30%
+}

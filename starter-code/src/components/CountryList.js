@@ -1,12 +1,13 @@
 import React from "react";
 import countriesJson from "../countries.json"
 import { Link  } from "react-router-dom"
+import CountryInfo from './CountryInfo';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const countryList = () => {
 
     const countriesList = countriesJson;
     
-    console.log(countriesList);
     return(
         <div className="list-group">
             <nav className="navbar navbar-dark bg-primary sticky-top">
@@ -20,11 +21,12 @@ const countryList = () => {
                 countriesList.map((eachCountry, index) => {
                     return(
                         <div key={index} className="col-5" style={{ maxHeight: '90vh'}}>
-                            <a href="" className="list-group-item list-group-item-action">{eachCountry.name.official}</a>
+                            <Link to={`/countryList/${eachCountry.name.official}`} className="list-group-item list-group-item-action">{eachCountry.name.official}</Link>
                         </div>
                     )
                 })
             }
+            <CountryInfo />
         </div>
     )
 }
