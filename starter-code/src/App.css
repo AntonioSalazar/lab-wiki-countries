@@ -37,10 +37,9 @@
 }
 
 .info-container{
-  background: green;
   position: absolute;
   float: rigth;
-  top: 80px;
+  top: 90px;
   left: 50%;
   width: 30%
 }
